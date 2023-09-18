@@ -70,7 +70,7 @@ class PlaylistContainerState extends State<PlaylistContainer> {
     for (var index = 0; index < youtubeMusicTracks.length; index++) {
       String videoId = youtubeMusicTracks[index].id;
       print("Adding ${youtubeMusicTracks[index].name} to playlist");
-      await addVideoToPlaylist(videoId, testingPlaylistId, index);
+      await addVideoToPlaylist(videoId, testingPlaylistId!, index);
     }
     await Fluttertoast.showToast(
         msg: "Playlist Created",
